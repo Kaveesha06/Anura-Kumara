@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anura Kumara Dissanayake - President of Sri Lanka</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js" defer></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#0A2342',
+                        'secondary': '#159895',
+                        'accent': '#2C5F2D'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body x-data="{ activeSection: 'home' }" class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <nav class="fixed w-full z-50 bg-primary text-white py-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <h1 class="text-2xl font-bold">Anura Kumara</h1>
+            <div class="space-x-4">
+                <a @click="activeSection = 'home'" href="#home" class="hover:text-secondary">Home</a>
+                <a @click="activeSection = 'about'" href="#about" class="hover:text-secondary">About</a>
+                <a @click="activeSection = 'journey'" href="#journey" class="hover:text-secondary">Political Journey</a>
+                <a @click="activeSection = 'achievements'" href="#achievements" class="hover:text-secondary">Achievements</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-20">
+        <section id="home" class="min-h-screen bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-white">
+            <div class="text-center">
+                <h2 class="text-5xl font-bold mb-4">Anura Kumara Dissanayake</h2>
+                <p class="text-2xl">10th President of Sri Lanka</p>
+                <div class="mt-8 space-x-4">
+                    <a href="#about" class="bg-accent px-6 py-3 rounded-full hover:bg-green-700 transition">Learn More</a>
+                    <a href="#contact" class="border-2 border-white px-6 py-3 rounded-full hover:bg-white hover:text-primary transition">Contact</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="container mx-auto py-16 px-4">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h3 class="text-3xl font-semibold text-primary mb-6">About Me</h3>
+                    <p class="text-gray-700 mb-4">
+                        Born on November 24, 1968, Anura Kumara Dissanayake is a transformative leader dedicated to social justice and progressive change in Sri Lanka.
+                    </p>
+                    <p class="text-gray-700">
+                        From his early days with the JVP to becoming the leader of the National People's Power (NPP), he has consistently fought for equitable development and challenged systemic injustices.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h4 class="text-2xl font-medium text-secondary mb-4">Quick Facts</h4>
+                    <ul class="space-y-3">
+                        <li>🏛️ President of Sri Lanka (2024)</li>
+                        <li>🗳️ NPP Party Leader</li>
+                        <li>📍 Born in Central Sri Lanka</li>
+                        <li>🕰️ Political Career Since 1980s</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="journey" class="bg-gray-100 py-16">
+            <div class="container mx-auto px-4">
+                <h3 class="text-3xl font-semibold text-primary text-center mb-12">Political Journey</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h4 class="text-xl font-medium text-secondary mb-3">Early Activism</h4>
+                        <p>Engaged with JVP movements in the 1980s, demonstrating early commitment to social transformation.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h4 class="text-xl font-medium text-secondary mb-3">Parliamentary Entry</h4>
+                        <p>Elected to parliament in 2000, serving as Commercial Agriculture Minister for Kurunegala District in 2004.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h4 class="text-xl font-medium text-secondary mb-3">Presidential Victory</h4>
+                        <p>Historic election in September 2024 as the first third-party leader to become President of Sri Lanka.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="achievements" class="container mx-auto py-16 px-4">
+            <h3 class="text-3xl font-semibold text-primary text-center mb-12">Key Achievements</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-medium text-secondary mb-3">Economic Reform</h4>
+                    <p>Reduced current tax levels and eliminated VAT on essential goods, providing economic relief.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-medium text-secondary mb-3">Land Reform</h4>
+                    <p>Redistributed 11,000 acres from Kantale Sugar Corporation to small entrepreneurs.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-medium text-secondary mb-3">Judicial Review</h4>
+                    <p>Initiated review of over 400 cases and expedited investigations into major national incidents.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="bg-primary text-white py-16">
+            <div class="container mx-auto text-center">
+                <h3 class="text-3xl font-semibold mb-8">Get In Touch</h3>
+                <p class="mb-8">Connect with our office for inquiries and communications.</p>
+                <div class="space-x-4">
+                    <a href="#" class="bg-secondary px-6 py-3 rounded-full hover:bg-green-600">Email</a>
+                    <a href="#" class="border-2 border-white px-6 py-3 rounded-full hover:bg-white hover:text-primary">Social Media</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>© 2024 Anura Kumara Dissanayake. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
